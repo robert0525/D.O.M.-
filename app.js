@@ -6,10 +6,10 @@ const button = document.querySelector('button');
 
 toggleList.addEventListener('click', () => {
     if (listDiv.style.display == 'none' ) {
-        toggleList.textContent = "Hide list";
+        toggleList.textContent = 'Hide list';
         listDiv.style.display = 'block';
     } else {
-    toggleList.style.display = 'Show list';
+    toggleList.textContent = 'Show list';
     listDiv.style.display = 'none';
     }
 });
