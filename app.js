@@ -3,6 +3,8 @@ const listDiv = document.querySelector('.list');
 const input = document.querySelector('input.description');
 const p = document.querySelector('p.description');
 const button = document.querySelector('button.description');
+const addIthemInput = document.querySelector ('addIthemInput');
+const addIthemButton = document.querySelector ('addItemButton');
 
 toggleList.addEventListener('click', () => {
     if (listDiv.style.display == 'none' ) {
