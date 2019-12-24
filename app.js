@@ -22,6 +22,9 @@ descriptionbutton.addEventListener('click', () => {
 
 
 addIthemButton.addEventListener('click', () => {
+    let ul = document.getElementsByTagName("ul")[0];
     let li = document.createElement('li');
+    li.textContent = addIthemInput.value;
+
     
 });
