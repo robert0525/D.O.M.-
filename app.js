@@ -2,9 +2,9 @@ const toggleList = document.getElementById('toggleList');
 const listDiv = document.querySelector('.list');
 const descriptionInput = document.querySelector('input.description');
 const descriptionP = document.querySelector('p.description');
-const descriptionbutton = document.querySelector('button.description');
-const addIthemInput = document.querySelector ('addIthemInput');
-const addIthemButton = document.querySelector ('addItemButton');
+const descriptionButton = document.querySelector('button.description');
+const addIthemInput = document.querySelector ('.addIthemInput');
+const addItemButton = document.querySelector ('.addItemButton');
 
 toggleList.addEventListener('click', () => {
     if (listDiv.style.display == 'none' ) {
@@ -16,15 +16,18 @@ toggleList.addEventListener('click', () => {
     }
 });
 
-descriptionbutton.addEventListener('click', () => {
+descriptionButton.addEventListener('click', () => {
     descriptionP.innerHTML = descriptionInput.value + ':';
 });
 
 
-addIthemButton.addEventListener('click', () => {
-    let ul = document.getElementsByTagName("ul")[0];
+addItemButton.addEventListener('click', () => {
+    let ul = document.getElementsByTagName('ul')[0];
     let li = document.createElement('li');
     li.textContent = addIthemInput.value;
+    ul.appendChild(li);
 
     
 });
+
+document.getElementById
