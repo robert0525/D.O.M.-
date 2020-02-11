@@ -5,14 +5,19 @@ const descriptionP = document.querySelector('p.description');
 const descriptionButton = document.querySelector('button.description');
 const addIthemInput = document.querySelector ('.addIthemInput');
 const addItemButton = document.querySelector ('.addItemButton');
+const removeItemButton = document.querySelector ('.removedItemButton');
+
 
 toggleList.addEventListener('click', () => {
     if (listDiv.style.display == 'none' ) {
-        toggleList.textContent = 'Hide list';
+
         listDiv.style.display = 'block';
+        toggleList.textContent = 'Hide list';
+
+
     } else {
-    toggleList.textContent = 'Show list';
     listDiv.style.display = 'none';
+    toggleList.textContent = 'Show list';
     }
 });
 
@@ -28,7 +33,12 @@ addItemButton.addEventListener('click', () => {
     li.textContent = addIthemInput.value;
     ul.appendChild(li);
     addIthemInput.value = '';
-    
 });
 
+removeItemButton.addEventListener('click', () => {
+    let ul = document.getElementsByTagName('ul')[0];
+    let li = document.querySelector('li:last-child');
 
+    ul.removeChild(li);
+
+});
