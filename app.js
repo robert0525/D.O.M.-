@@ -6,7 +6,15 @@ const descriptionButton = document.querySelector('button.description');
 const addIthemInput = document.querySelector ('.addIthemInput');
 const addItemButton = document.querySelector ('.addItemButton');
 const removeItemButton = document.querySelector ('.removedItemButton');
+const listItem = document.getElementsByTagName('li')[0];
 
+listItem.addEventListener('mouseover',() => {
+    listItem.textContent = listItem.textContent.toUpperCase();
+});
+
+listItem.addEventListener('mouseout',() => {
+    listItem.textContent = listItem.textContent.toLowerCase();
+});
 
 toggleList.addEventListener('click', () => {
     if (listDiv.style.display == 'none' ) {
